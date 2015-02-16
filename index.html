@@ -1,33 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Glen Keane by thekemkid</title>
+---
+layout: default
+title: Glen Keane's Homepage
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Glen Keane</h1>
-        <p>Another bloody developers site!</p>
-      </header>
-      <section>
-        <h3>
-<a id="welcome-to-my-little-corner-of-the-web" class="anchor" href="#welcome-to-my-little-corner-of-the-web" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to my little corner of the web!</h3>
 
-<p>Hey, my name is Glen Keane and I am a software developer living in Waterford, Ireland.</p>
-      </section>
-      <footer>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<h1>{{ page.title }}</h1>
+<h2>About me:</h2>
+
+<p>I am a software developer from Waterford, Ireland. I am currently on an internship in Nearform, where I am working on and with node.js. I'm also an avid gamer, and spend my evenings tinkering in Minecraft and working on mods.</p>
+
+{% for post in site.posts %}
+
+    {{ post.date | date: "%B %e, %Y" }}
+    <a href="{{ post.url }}">{{ post.title }}</a>
+
+{% endfor %}
