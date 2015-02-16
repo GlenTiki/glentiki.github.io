@@ -3,15 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
+        <link rel="stylesheet" type="text/css" href="/public/css/base.css">
     </head>
     <body>
 
-    	{% include header.html %}
-
+        <div id='header'>
+            {% include header.html %}
+        </div>
+        
         {{ content }}
 
-        {% include footer.html %}
-
-
+        <div id='footer'>
+            {% include footer.html %}
+        </div>
+        
     </body>
 </html>

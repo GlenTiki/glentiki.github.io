@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholder post
+title: My first post
 ---
 
 **{{ page.title }}** written in markdown.
