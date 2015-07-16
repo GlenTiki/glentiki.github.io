@@ -1,0 +1,6 @@
+<div class="tags">
+{% for tag in site.tags %}
+  {% assign t = tag | first | downcase | replace:" ","-" %}
+  <div class='tag'><a href='/tags/#{{t}}'>{{t}}</a></div>
+{% endfor %}
+</div>

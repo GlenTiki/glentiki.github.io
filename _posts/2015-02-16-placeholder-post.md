@@ -3,6 +3,9 @@ layout: post
 title: My first post
 redirect_from: "/2015/02/16/placeholder-post/"
 permalink: placeholder-post
+tags:
+  -  A test tag
+  -  and another test tag
 ---
 
 **{{ page.title }}** written in markdown. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus erat sapien, venenatis id eleifend a, scelerisque in nulla. Pellentesque in mi id eros fermentum bibendum. Aenean luctus, leo et auctor vehicula, elit velit feugiat orci, ut sodales elit elit vitae purus. Praesent vitae tincidunt est. Vestibulum erat arcu, semper ut tincidunt quis, ullamcorper vel nisi. Donec posuere erat ligula, eget consectetur sapien rutrum quis. Suspendisse dignissim non metus nec iaculis. Suspendisse ullamcorper est eu dui lobortis ullamcorper. Aliquam blandit quam metus, eget finibus libero vestibulum et. Cras auctor gravida quam sit amet suscipit. Curabitur suscipit posuere leo, id iaculis turpis facilisis nec. In eget euismod erat, at luctus erat. Sed eu lacus ac metus pretium vestibulum et vel odio. Praesent nibh nibh, ultricies quis placerat vitae, ullamcorper eget neque. Curabitur augue nunc, rhoncus non vehicula ut, rhoncus a purus.

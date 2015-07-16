@@ -15,7 +15,25 @@ comments: true
 	{{ content }}
 </p>
 
- {% for post in site.posts %}
+{% if page.tags %}
+<h5 class='muted'>Filed under:</h5>
+<div class="tags">
+  {% for tag in page.tags %}
+    {% assign t = tag | downcase | replace:" ","-" %}
+    <div class='tag'><a href='/tags/#{{t}}'>{{t}}</a></div>
+  {% endfor %}
+</div>
+{% endif %}
+
+If you liked this post, you can
+<a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=thekemkid" 
+   target="_blank">
+  share it with your followers</a> 
+or 
+<a href="https://twitter.com/thekemkid">
+  follow me on Twitter</a>!
+
+{% for post in site.posts %}
   {% if post.url == page.url %}
     {% assign post_index0 = forloop.index0 %}
     {% assign post_index1 = forloop.index %}
@@ -29,6 +47,7 @@ comments: true
     {% assign prev_post = post.url %}
   {% endif %}
 {% endfor %}
+<br>
 {% if prev_post %}
   <a href="{{ prev_post }}">&laquo; Older Post</a>
 {% else %}
@@ -40,12 +59,4 @@ comments: true
 {% else %}
   Newer Post &raquo;
 {% endif %}
-
-If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=thekemkid" 
-   target="_blank">
-  share it with your followers</a> 
-or 
-<a href="https://twitter.com/thekemkid">
-  follow me on Twitter</a>!
-
+<br>
