@@ -21,6 +21,10 @@ title: anotherDevsRamblings
 
     <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
 
+    <h3>
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">Read more <span class='glyphicon glyphicon-chevron-right'></span></a> |
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments <span class='glyphicon glyphicon-chevron-right'></span></a>
+    </h3>
     <hr>
   {% endfor %}
 </div>
