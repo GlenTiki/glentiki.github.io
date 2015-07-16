@@ -25,10 +25,8 @@ body {
 #wrap {
   min-height: 100%;
   height: auto;
-  /* Negative indent footer by its height */
   margin: 0 auto -60px;
   margin-top: 50px;
-  /* Pad bottom by footer height */
   padding: 0 0 60px;
 }
 
@@ -56,12 +54,12 @@ span.glyphicon {
   display: inline-block;
 }
 
-.tag:before{
+.tag:before {
   content: '\b7\a0\a0\a0';
   font-weight: bold;
 }
 
 section {
-padding-top:150px;
-margin-top:-150px;
+  padding-top:150px;
+  margin-top:-150px;
 }
