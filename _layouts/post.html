@@ -25,14 +25,6 @@ comments: true
 </div>
 {% endif %}
 
-If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=thekemkid" 
-   target="_blank">
-  share it with your followers</a> 
-or 
-<a href="https://twitter.com/thekemkid">
-  follow me on Twitter</a>!
-
 {% for post in site.posts %}
   {% if post.url == page.url %}
     {% assign post_index0 = forloop.index0 %}
@@ -48,15 +40,28 @@ or
   {% endif %}
 {% endfor %}
 <br>
-{% if prev_post %}
-  <a href="{{ prev_post }}">&laquo; Older Post</a>
-{% else %}
-  &laquo; Older Post
-{% endif %}
-|
-{% if next_post %}
-  <a href="{{ next_post }}">Newer Post &raquo;</a>
-{% else %}
-  Newer Post &raquo;
-{% endif %}
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="thekemkid">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script type="IN/Share" data-counter="right"></script>
+
+<a href="https://news.ycombinator.com/submit" class="hn-button" data-count="horizontal">Vote on Hacker News</a>
+<script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+
+<script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
+
+<span class='pull-right'>
+  {% if prev_post %}
+    <a href="{{ prev_post }}">&laquo; Older Post</a>
+  {% else %}
+    &laquo; Older Post
+  {% endif %}
+  |
+  {% if next_post %}
+    <a href="{{ next_post }}">Newer Post &raquo;</a>
+  {% else %}
+    Newer Post &raquo;
+  {% endif %}
+</span>
 <br>

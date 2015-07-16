@@ -59,7 +59,8 @@ span.glyphicon {
   font-weight: bold;
 }
 
-section {
+section, 
+#disqus_thread {
   padding-top:150px;
   margin-top:-150px;
 }

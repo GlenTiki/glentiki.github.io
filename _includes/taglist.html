@@ -1,6 +1,8 @@
 <div class="tags">
-{% for tag in site.tags %}
+{% for tag in site.tags limit:5%}
   {% assign t = tag | first | downcase | replace:" ","-" %}
   <div class='tag'><a href='/tags/#{{t}}'>{{t}}</a></div>
 {% endfor %}
+<br>
+<a href='/tags'>See all tags...</a>
 </div>
