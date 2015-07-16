@@ -1,1 +1,25 @@
 markdown: rdiscount
+
+title: anotherDevBlog.
+email: glenkeane.94@gmail.com
+description: "This is Glen Keane's personal website."
+
+paginate: 10
+baseurl: ""
+url: "http://glenkeane.me"
+
+permalink: pretty
+relative_permalinks: true
+
+pages_list:       
+  About: '/about/'
+  Archive: '/archive/'
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: "Glen Keane"
+

@@ -1,34 +1,56 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Mygithubpage by thekemkid</title>
+---
+layout: default
+title: anotherDevsRamblings
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Functional woes</h1>
-        <img width="200" height="250"></img>
-      </header>
-      <section>
-        <h3>
-         Welcome to Glen Keanes slice of madness.
-        </h3>
-      </section>
-      <footer>
-        <p>This blog is maintained by <a href="https://github.com/thekemkid">Glen Keane(@thekemkid)</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Base theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<h1>var {{ page.title }} = this;</h1>
+
+<p class="text-justify">
+	Welcome to my little corner in the big world. Feel free to poke around. This is the home to my ramblings on technology, gaming, current events and so on and so forth. Eventually I might consider myself one of them hipster bloggers... :D
+</p>
+<hr>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+    <h2>
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <h5 class='muted'> Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} </h5>
+
+    <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
+
+    <h3>
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">Read more <span class='glyphicon glyphicon-chevron-right'></span></a> |
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments <span class='glyphicon glyphicon-chevron-right'></span></a>
+    </h3>
+    <hr>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

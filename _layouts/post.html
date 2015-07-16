@@ -1,7 +1,43 @@
 ---
 layout: default
-title: This is just a placeholder post
+comments: true
 ---
 
-{{ content }}
+<h1>{{ page.title }}</h1>
+
+<h5 class="muted">
+	Written by {{ page.author }}
+</h5>
+
+<hr>
+
+<p class="text-justify">
+	{{ content }}
+</p>
+
+ {% for post in site.posts %}
+  {% if post.url == page.url %}
+    {% assign post_index0 = forloop.index0 %}
+    {% assign post_index1 = forloop.index %}
+  {% endif %}
+{% endfor %}
+{% for post in site.posts %}
+  {% if post_index0 == forloop.index %}
+    {% assign next_post = post.url %}
+  {% endif %}
+  {% if post_index1 == forloop.index0 %}
+    {% assign prev_post = post.url %}
+  {% endif %}
+{% endfor %}
+{% if prev_post %}
+  <a href="{{ prev_post }}">&laquo; Older Post</a>
+{% else %}
+  &laquo; Older Post
+{% endif %}
+|
+{% if next_post %}
+  <a href="{{ next_post }}">Newer Post &raquo;</a>
+{% else %}
+  Newer Post &raquo;
+{% endif %}
 
