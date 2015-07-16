@@ -1,16 +1,52 @@
 ---
 layout: default
-title: Glen Keane's Homepage
+title: anotherDevsRamblings
 ---
 
-<h2>About me:</h2>
+<h1>var {{ page.title }} = this;</h1>
 
-<p>I am a software developer from Waterford, Ireland. I am currently on an internship in Nearform, where I am working on and with node.js. I'm also an avid gamer, and spend my evenings tinkering in Minecraft and working on mods.</p>
+<p class="text-justify">
+	Welcome to my little corner in the big world. Feel free to poke around. This is the home to my ramblings on technology, gaming, current events and so on and so forth. Eventually I might consider myself one of them hipster bloggers... :D
+</p>
+<hr>
 
+<div class="posts">
+  {% for post in paginator.posts %}
+    <h2>
+      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <h5 class='muted'> Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} </h5>
 
-{% for post in site.posts %}
+    <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
 
-    {{ post.date | date: "%B %e, %Y" }}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <hr>
+  {% endfor %}
+</div>
 
-{% endfor %}
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
