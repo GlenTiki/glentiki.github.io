@@ -11,21 +11,20 @@ tags:
   -  Tutorial
 ---
 
-I just completed my blog! yay! I can now start to create blog posts and share them with friends and foes alike :D This post is the inauguration post for my blog, and I think I'm going to take a leaf from [this guys post][1], and make an indepth post explaining how I created this blog, using tools like jekyll, disqus and even more. I wouldn't have been able to make a blog half as good as what I have right now if it wasn't for that post. 
-
-But, before I go too far down the road of talking tech, I would like to clearly define the mission statement of my blog, and what I would like to do with it.
+I just completed my personal website and blog! Yay! I can now start to create blog posts and share them with friends and foes alike :D If you stumbled across these rambles by accident and want to read more about me, check out the [about me section][1].This post is the inauguration post for my blog so I would like to clearly define the mission statement of my blog, and what I would like to do with it.
 
 ### Mission statement, Meta talk and My plans
 
-My mission statement is a very clear, concise sentence. I want to make a hub for my personal thoughts and ramblings, and I shall try my hardest to make it so those rants, raves and rambles are cohesive, can help people, and/or they will motivate them to **do some good**. These posts are how I can rant when I just *can't* figure out how the fuck I am supposed to get elasticsearch to run natively on linux for a project I am working on, only to give up and switch to the docker container. They are are how I can write posts laughing at the fact I was frustrated for 3 days trying to get elasticsearch to work once, when I then fixed it in 60 seconds just deciding to run `docker run -d -p 9200:9200 -p 9300:9300 elasticsearch`. They are how I can connect to world and get outside my own head. I have lots of thoughts knocking around up there.
+My blog is for my friends, tech enthusiasts and developers who might want a window into my life, or for those who may need an indepth how-to reference post on a topic I am familar with. I will try to keep it clear, helpful and professional where needed, and I will try to let my personality shine through where appropriate. Like right here! :D
 
-Occasionally, I will break out my nerdy knowledge and school the world in the lore of some fictional universe I have been immersing myself in, too. I would like that. I would like that a lot.
+My motivation for this blog is twofold, the first reason is simple, I need proper personal professional representation, and the second reason is that I spend most of my day talking tech, making things with tech and just generally _thinking_ all things tech, so I should probably put those thoughts somewhere where I can refer to easily. I can barely remember what I had for dinner yesterday, let alone what I was thinking about yesterday, so I need this. It will be my place of reference for tech things I worked on, which I think are pretty cool, but way too complicated to keep in my head giong forward. Enter glenkeane.me, my new journal and encyclopedia of reference on yesterdays forgotten thoughts.
 
-I plan on make this a blog that shows the world my path from junior software developer to whatever I may become, where ever I end up.
+How-to posts are going to be essential to my blog as well, as I am a very practical learner (or remember-er, if I am re-reading a post). I want my blog to be a quality reference which I can be proud of. And the only way to do that, is to get blogging!
 
-### How I made this blog (Protip:Jekyll)
-I used a cool technology called [Jekyll][3].
+#### Not just for serious talk...
 
-[1]: http://joshualande.com/jekyll-github-pages-poole/
-[2]: https://www.youtube.com/watch?v=Pkyy57iMaB0
-[3]: http://jekyllrb.com/
+But it doesn't have to be all super serious with no fun talk, I also plan on chipping in with my thoughts about some current events which are causing a stir, talking about gaming, online life, comedy and I might even put together a clickbait-y 'top 10 reasons why...' for fun. Blogging will be an activity that cuts into my pleasure time, so I will always try to keep it pleasurable by talking about things that interest me. :)
+
+Thanks for reading, I hope this ramble has explained what I made this for, and what I plan on doing with it!
+
+[1]: /about
