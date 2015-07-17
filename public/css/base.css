@@ -40,11 +40,19 @@ body {
   text-align: center;
 }
 
-span.glyphicon-comment {
+.glyphicon-comment, 
+.glyphicon-tags,
+.glyphicon-time,
+.glyphicon-cog,
+.glyphicon-asterisk,
+.glyphicon-star-empty,
+.glyphicon-education,
+.glyphicon-heart-empty,
+.glyphicon-user {
     font-size: 0.8em;
 }
 
-span.glyphicon-chevron-right {
+.glyphicon-chevron-right {
     font-size: 0.6em;
 }
 

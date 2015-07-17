@@ -26,8 +26,7 @@ title: Tags
   		{% if post.tags contains t %}
   		  <section id='{{tag | first | downcase | replace:" ","-"}}'>
   				<li>
-  	  			<a href="{{ post.url }}">{{ post.title }}</a>
-  	  			<span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  					<h4 class="text-justify"><span class='muted'>{{ post.date | date: "%B %e, %Y" }}</span> | <a class='text-default' href="{{ post.url }}">{{ post.title }}</a></h4>
   				</li>
   			</section>
   		{% endif %}

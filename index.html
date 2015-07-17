@@ -20,12 +20,12 @@ commentCount: true
     </h2>
     <h3 class='muted'> 
       <small>
-        Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+        <span class='glyphicon glyphicon-time'></span> Posted: {{ post.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
       </small>
     </h3>
 
     <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
-    <h6 class='muted'>Tags: 
+    <h6 class='muted'><span class='glyphicon glyphicon-tags'></span> Tags: 
       <span class="tags">
         {% for tag in post.tags %}
           {% assign t = tag | downcase | replace:" ","-" %}

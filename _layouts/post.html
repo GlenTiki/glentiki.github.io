@@ -8,7 +8,7 @@ commentCount: true
 
 <h3>
   <small>
-	  Written by {{ page.author }} | Posted: {{ page.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{page.url}}"></a>
+	  <span class='glyphicon glyphicon-time'></span> Posted: {{ page.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ page.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{page.url}}"></a>
   </small>
 </h3>
 
@@ -19,7 +19,7 @@ commentCount: true
 </p>
 <hr>
 {% if page.tags %}
-<h5 class='muted'>Filed under:</h5>
+<h5 class='muted'><span class='glyphicon glyphicon-tags'></span> Filed under:</h5>
 <div class="tags">
   {% for tag in page.tags %}
     {% assign t = tag | downcase | replace:" ","-" %}
