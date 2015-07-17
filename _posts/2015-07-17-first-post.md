@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My first post, and how I created this blog.
+title: My first post, and why I created this blog.
 redirect_from: "/2015/07/17/first-post/"
 permalink: first-post
 tags: 
