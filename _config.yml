@@ -1,8 +1,8 @@
 markdown: rdiscount
 
-title: anotherDevBlog.
+title: anotherDevsRamblings.
 email: glenkeane.94@gmail.com
-description: "This is Glen Keane's personal website."
+description: "This is Glen Keane's personal website for all his rants, raves and ramlings."
 
 paginate: 10
 baseurl: ""

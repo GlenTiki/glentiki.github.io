@@ -1,6 +1,7 @@
 ---
 layout: default
 title: anotherDevsRamblings
+commentCount: true
 ---
 
 <h1>var {{ page.title }} = this;</h1>
@@ -17,7 +18,11 @@ title: anotherDevsRamblings
         {{ post.title }}
       </a>
     </h2>
-    <h5 class='muted'> Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} </h5>
+    <h3 class='muted'> 
+      <small>
+        Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} | <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+      </small>
+    </h3>
 
     <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
     <h6 class='muted'>Tags: 
@@ -29,8 +34,14 @@ title: anotherDevsRamblings
       </span>
     </h6>
     <h3>
-      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">Read more <span class='glyphicon glyphicon-chevron-right'></span></a> |
-      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments <span class='glyphicon glyphicon-chevron-right'></span></a>
+      <small>
+        <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">
+          Read more <span class='glyphicon glyphicon-chevron-right'></span>
+        </a> 
+        |
+        <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+        <span class='glyphicon glyphicon-chevron-right'></span>
+      </small>
     </h3>
     <hr>
   {% endfor %}
