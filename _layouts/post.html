@@ -6,7 +6,7 @@ comments: true
 <h1>{{ page.title }}</h1>
 
 <h5 class="muted">
-	Written by {{ page.author }}
+	Written by {{ page.author }} | Posted: {{ page.date | date: "%B %e, %Y" }}
 </h5>
 
 <hr>
@@ -14,7 +14,7 @@ comments: true
 <p class="text-justify">
 	{{ content }}
 </p>
-
+<hr>
 {% if page.tags %}
 <h5 class='muted'>Filed under:</h5>
 <div class="tags">
