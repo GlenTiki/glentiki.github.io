@@ -23,7 +23,6 @@ Occasionally, I will break out my nerdy knowledge and school the world in the lo
 
 I plan on make this a blog that shows the world my path from junior software developer to whatever I may become, where ever I end up.
 
-
 ### How I made this blog (Protip:Jekyll)
 I used a cool technology called [Jekyll][3].
 

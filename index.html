@@ -20,7 +20,7 @@ commentCount: true
     </h2>
     <h3 class='muted'> 
       <small>
-        Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} | <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+        Posted: {{ post.date | date: "%B %e, %Y" }} | Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
       </small>
     </h3>
 
@@ -39,7 +39,7 @@ commentCount: true
           Read more <span class='glyphicon glyphicon-chevron-right'></span>
         </a> 
         |
-        <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+        <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
         <span class='glyphicon glyphicon-chevron-right'></span>
       </small>
     </h3>

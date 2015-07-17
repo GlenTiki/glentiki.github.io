@@ -40,7 +40,11 @@ body {
   text-align: center;
 }
 
-span.glyphicon {
+span.glyphicon-comment {
+    font-size: 0.8em;
+}
+
+span.glyphicon-chevron-right {
     font-size: 0.6em;
 }
 
