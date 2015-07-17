@@ -5,10 +5,8 @@ redirect_from: "/2015/07/17/first-post/"
 permalink: first-post
 tags: 
   -  General
+  -  Personal
   -  Meta
-  -  Jekyll
-  -  Twitter Bootstrap
-  -  Tutorial
 ---
 
 I just completed my personal website and blog! Yay! I can now start to create blog posts and share them with friends and foes alike :D If you stumbled across these rambles by accident and want to read more about me, check out the [about me section][1].This post is the inauguration post for my blog so I would like to clearly define the mission statement of my blog, and what I would like to do with it.
@@ -25,6 +23,8 @@ How-to posts are going to be essential to my blog as well, as I am a very practi
 
 But it doesn't have to be all super serious with no fun talk, I also plan on chipping in with my thoughts about some current events which are causing a stir, talking about gaming, online life, comedy and I might even put together a clickbait-y 'top 10 reasons why...' for fun. Blogging will be an activity that cuts into my pleasure time, so I will always try to keep it pleasurable by talking about things that interest me. :)
 
-Thanks for reading, I hope this ramble has explained what I made this for, and what I plan on doing with it!
+Thanks for reading, I hope this ramble has explained what I made this site for, and what I plan on doing with it!
+
+Next time, I plan on talking about _how_ I made this site, using Jekyll, Github and more. This site was built on tools which anyone can avail of for free, so, if doing something similar interests you, then tune in next time.
 
 [1]: /about
