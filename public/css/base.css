@@ -12,6 +12,10 @@ hr {
   color: #3D3D3D;
 }
 
+.text-muted {
+  color: #777;
+}
+
 .inline-headers h5 {
   display: inline-block;
   vertical-align: baseline;
@@ -72,7 +76,14 @@ body {
 }
 
 section, 
-#disqus_thread {
-  padding-top:150px;
-  margin-top:-150px;
+#disqus_thread{
+  padding-top: 150px;
+  margin-top: -150px;
+}
+
+.anchor-link {
+  display: block; 
+  position: relative; 
+  top: -100px; 
+  visibility: hidden;
 }

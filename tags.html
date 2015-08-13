@@ -4,7 +4,7 @@ title: Tags
 ---
 
 <div class="tags">
-{% for tag in site.tags limit:5%}
+{% for tag in site.tags%}
   {% assign t = tag | first | downcase | replace:" ","-" %}
   <div class='tag'><a href='#{{t}}'>{{t}}</a></div>
 {% endfor %}
@@ -19,7 +19,7 @@ title: Tags
 		<strong>
 		  {{tag | first | downcase | replace:" ","-"}}
 	  </strong>
-	  {{ posts | size }} posts.
+	  {{ posts.size() }} post{% if posts.size() > 1 %}s{% endif %}. 
 	</h3>
 	<ul>
 		{% for post in posts %}

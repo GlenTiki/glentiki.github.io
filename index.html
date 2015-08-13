@@ -1,10 +1,9 @@
 ---
 layout: default
-title: anotherDevsRamblings
 commentCount: true
 ---
 
-<h1>var {{ page.title }} = this;</h1>
+<h1>var {{ site.title }} = this;</h1>
 
 <p class="text-justify">
 	Welcome to my little corner in the big world. Feel free to poke around. This is the home to my ramblings on technology, gaming, current events and so on and so forth. Eventually I might consider myself one of them hipster bloggers... :D
@@ -20,7 +19,7 @@ commentCount: true
     </h2>
     <h3 class='muted'> 
       <small>
-        <span class='glyphicon glyphicon-time'></span> Posted: {{ post.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+        <span class='glyphicon glyphicon-time'></span> Posted: {{ post.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-muted' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
       </small>
     </h3>
 

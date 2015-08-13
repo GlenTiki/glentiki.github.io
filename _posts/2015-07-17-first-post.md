@@ -9,15 +9,15 @@ tags:
   -  Meta
 ---
 
-I just completed my personal website and blog! Yay! I can now start to create blog posts and share them with friends and foes alike :D If you stumbled across these rambles by accident and want to read more about me, check out the [about me section][1].This post is the inauguration post for my blog so I would like to clearly define the mission statement of my blog, and what I would like to do with it.
+I just completed my personal website and blog! Yay! I can now start to create blog posts and share them with friends and foes alike :D If you stumbled across these rambles by accident and want to read more about me, check out the [about me section][1]. This post is the inauguration post for my blog so I would like to clearly define the mission statement of my blog, and what I would like to do with it.
 
 ### Mission statement, Meta talk and My plans
 
 My blog is for my friends, tech enthusiasts and developers who might want a window into my life, or for those who may need an indepth how-to reference post on a topic I am familar with. I will try to keep it clear, helpful and professional where needed, and I will try to let my personality shine through where appropriate. Like right here! :D
 
-My motivation for this blog is twofold, the first reason is simple, I need proper personal professional representation, and the second reason is that I spend most of my day talking tech, making things with tech and just generally _thinking_ all things tech, so I should probably put those thoughts somewhere where I can refer to easily. I can barely remember what I had for dinner yesterday, let alone what I was thinking about yesterday, so I need this. It will be my place of reference for tech things I worked on, which I think are pretty cool, but way too complicated to keep in my head going forward. Enter glenkeane.me, my new journal and encyclopedia of reference on yesterdays forgotten thoughts.
+My motivation for this blog is twofold, the first reason is simple, I need proper online personal professional representation, and the second reason is that I spend most of my day talking tech, making things with tech and just generally _thinking_ all things tech, so I should probably put those thoughts somewhere where I can refer to easily. I can barely remember what I had for dinner yesterday, let alone what I was thinking about yesterday, so _I_ need this, more than anyone else. It will be my place of reference for tech things I worked on, which I think are pretty cool, but way too complicated to keep in my head, going forward. Enter glenkeane.me, my new journal and encyclopedia of reference on yesterdays forgotten thoughts and dev work.
 
-How-to posts are going to be essential to my blog as well, as I am a very practical learner (or remember-er, if I am re-reading a post). I want my blog to be a quality reference which I can be proud of. And the only way to do that, is to get blogging!
+How-to posts are going to be essential to my blog as well, as I am a very practical learner (or remember-er, for those times I am re-reading a post). I want my blog to be a quality reference which I can be proud of. And the only way to do that, is to get blogging!
 
 #### Not just for serious talk...
 
@@ -27,4 +27,7 @@ Thanks for reading, I hope this ramble has explained what I made this site for, 
 
 Next time, I plan on talking about _how_ I made this site, using Jekyll, Github and more. This site was built on tools which anyone can avail of for free, so, if doing something similar interests you, then tune in next time.
 
+(The new post is live and available [over here][2])
+
 [1]: /about
+[2]: /how-I-created-this-blog
