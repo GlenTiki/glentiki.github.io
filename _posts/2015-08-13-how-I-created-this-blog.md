@@ -301,15 +301,15 @@ title: Tags
 Google analytics is something you should definitely add to all your sites. Adding it just requires a piece of html taken from the analytics site. You must register your site with google, and then it gives you the piece of html to be added. Take this piece of html and add it to the bottom of your default layout. I put mine in a partial, and include it the main layout. Doing this is similar adding the disqus comments, first you need to create an `analytics.html` partial to be included, with your html taken from analytics, it might look like so:
 
 ```
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'YOUR CODE', 'auto');
-  ga('send', 'pageview');
-</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'YOUR CODE', 'auto');
+	  ga('send', 'pageview');
+	</script>
 ```
 
 and then to use it, simply put {% raw %}`{% include analytics.html %}`{% endraw %} at the bottom of your default layout :)
