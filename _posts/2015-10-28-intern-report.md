@@ -40,7 +40,7 @@ Seeing it grow from one room in an office complex to our own dedicated building 
 
 ## Getting off the ground
 
-Before I started my internship, I asked to work with some native Node.js modules. When I arrived into the office on that first Monday morning, I was introduced to Damian Beresford, one of the delivery architects in nearForm. Damian was to be my instructor, and he had an idea for a project which was the perfect fit for what I wanted to work on. Under his guidance, I implemented LTTng support in Node.js.
+Before I started my internship, I asked to work with some native Node.js modules. When I arrived into the office on that first Monday morning, I was introduced to Damian Beresford, one of the delivery architects in nearForm. Damian was to be my instructor, and he had an idea for a project which was the perfect fit for what I wanted to work on. Under his guidance, I implemented [LTTng support in Node.js][2].
 
 Next, I worked on open source libraries for instrumenting Node.js code.
 
@@ -60,15 +60,15 @@ The fact that I was allowed to do so reflects the spirit of supportiveness and t
 
 ## Community work
 
-nearForm is heavily involved in open source and the global software community. As part of this work, the company is a partner and sponsor of the CoderDojo Foundation. I got the chance to work on the new community platform that CoderDojo recently released. The people who work for and with the CoderDojo Foundation are phenomenal people and I feel privileged to have worked on that project.
+nearForm is heavily involved in open source and the global software community. As part of this work, the company is a partner and sponsor of the [CoderDojo Foundation][3]. I got the chance to work on [the new community platform that CoderDojo recently released][4]. The people who work for and with the CoderDojo Foundation are phenomenal people and I feel privileged to have worked on that project.
 
 Also, seeing everything that happens on the development of a large microservices project such as this made me really appreciate the importance of communication skills for us as software developers and engineers.
 
 ## Events
 
-While working on these projects, I had the chance to get involved with some of the many events that nearForm runs. I attended a number of Node.js Dublin meetups, a Microservices Dublin meetup and the CoderDojo Coolest Projects event. nearForm encourages all its staff to become involved in the tech community on a wider level. I got to assist in the running of events that I never imagined I would be attending. These were enjoyable and memorable experiences. (How could I forget some kids trying to land a drone on me at the Coolest Projects event?)
+While working on these projects, I had the chance to get involved with some of [the many events][5] that nearForm runs. I attended a number of [Node.js Dublin][6] meetups, a [Microservices Dublin][7] meetup and the [CoderDojo Coolest Projects][8] event. nearForm encourages all its staff to become involved in the tech community on a wider level. I got to assist in the running of events that I never imagined I would be attending. These were enjoyable and memorable experiences. (How could I forget some kids trying to land a drone on me at the Coolest Projects event?)
 
-I also got to work on a “cocktail robot” for the NodeConf EU event before I finished my internship. The task assigned to another intern and me was to build four cocktail-making robots in five days (including the weekend). To do this, we had to assemble the robots, develop software to run the pumps, and build a server that sent jobs to the pumps over mqtt [Github link].
+I also got to work on a “cocktail robot” for the [NodeConf EU][9] event before I finished my internship. The task assigned to another intern and me was to build four cocktail-making robots in five days (including the weekend). To do this, we had to assemble the robots, develop software to run the pumps, and build a server that sent jobs to the pumps over [mqtt][10] [(Github link)][11].
 
 The guys who came up with the cocktail robot idea assembled the PIs, while another intern and I collaborated to come up with the best messaging format between the server and the PIs. I then built the server and the UI. The UI was built with Bootstrap and AngularJS, which communicated with the server in real time using Socket.IO.
 
@@ -80,3 +80,13 @@ Looking forward
 Going forward, I hope to work a lot more with Node.js. I’m using it for my final year project in college. I loved every moment of my internship, and hope that nearForm will have me back when I graduate.
 
 [1]: http://www.nearform.com/nodecrunch/working-nearform-software-development-interns-story/
+[2]: https://github.com/nodejs/node/pull/702
+[3]: https://coderdojo.com/about/coderdojo-foundation/who-we-are/
+[4]: https://zen.coderdojo.com/
+[5]: http://www.nearform.com/events/
+[6]: http://www.nodejsdublin.com/
+[7]: http://microservicesdublin.com/
+[8]: http://coolestprojects.org/
+[9]: http://nodeconfeu.com/
+[10]: http://mqtt.org/
+[11]: https://github.com/liquid-io
