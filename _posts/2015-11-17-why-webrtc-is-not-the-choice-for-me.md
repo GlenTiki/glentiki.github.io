@@ -13,7 +13,8 @@ tags:
   -  "Final year project"
   -  Node.js
 ---
-Realtime Browser Communications: Why WebRTC is not the choice for me.
+
+## Introduction
 
 In my previous post, I talk about why WebSockets are a good choice for my final year project: Essentially, it is an “always open” connection from my server to clients in a room, which allows for the clients to send synchronization messages to each other quickly and easily.
 
