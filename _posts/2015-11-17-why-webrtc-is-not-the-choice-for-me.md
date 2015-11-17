@@ -2,7 +2,7 @@
 layout: post
 title: Realtime Browser Communications - Why WebRTC is not the choice for me.
 redirect_from: "/2015/11/17/why-webrtc-is-not-the-choice-for-me/"
-permalink: why-use-websockets
+permalink: why-webrtc-is-not-the-right-choice-for-me
 tags: 
   -  General
   -  Personal
@@ -24,13 +24,13 @@ In my post on why I am choosing node.js for my final year project, I talk about 
 
 WebRTC stands for WebRealTimeCommunications. So, its name is _exactly_ what I want to achieve, so, why aren’t I using it? WebRTC would connect clients of my application together with a socket connection. So, if there was 10 users in “Room A”, the 10 users would all be directly connected to each other, with a socket connection, similar to how the websocket would connect the users to the server. This would make them all “peers”, which means they are clients _and_ servers. When there is a synchronization message sent from one user, it would go to all other connected users in the current room. This would mean that the majority of the networking for my applications doesn’t come from my server, it happens between clients, and could cut down networking and hosting costs. This is a nice advantage, which I would like to take use of.
 
-## The downside
+## The Downside
 
 However! I discussed using WebRTC with Dan Jenkins, a Google Certified Expert and WebRTC Aficionado, who has delivered many talks on the subject. He said that WebRTC, while a great technology, is limited right now, because a peer can only handle, at most, 8-20 connections to other peers. This is simply because WebRTC is designed for the use  of a small network of communicating users, such as a conference call. This is not ideal for a large social network type project, and because of this limitation I decided to go back to the client-server implementation of using WebSockets.
 
 It is a shame, because WebRTC is a really cool emerging technology which also has a nice event-driven api, similar to websockets. There are other things to be considered when using WebRTC as well, such as the requirement to have a STUN server to help peers find other peers and connect to them. If there are any limitations to connecting a client in a peer-to-peer fashion with another client, that client will have to connect to a TURN server, with a websocket, and that server will relay the client's communications to other peers. Thus, running a WebRTC server, requires two other servers, which could possibly add more overhead. 
 
-## A workaround?
+## A Workaround?
 
 I started to think of/develop a solution for this limitation, but I decided it is not worth the amount of effort to develop it when websockets work.
 
