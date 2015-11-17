@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Realtime Browser Communications: Why WebRTC is not the choice for me.
+title: Realtime Browser Communications - Why WebRTC is not the choice for me.
 redirect_from: "/2015/11/17/why-webrtc-is-not-the-choice-for-me/"
 permalink: why-use-websockets
 tags: 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Realtime Browser Communications: Why use WebSockets?
+title: Realtime Browser Communications - Why use WebSockets?
 redirect_from: "/2015/11/12/why-use-websockets/"
 permalink: why-use-websockets
 tags: 
