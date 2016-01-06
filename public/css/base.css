@@ -87,3 +87,7 @@ section,
   top: -100px; 
   visibility: hidden;
 }
+
+.block-element {
+  display:block;
+}
