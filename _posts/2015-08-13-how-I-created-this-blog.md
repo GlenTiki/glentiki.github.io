@@ -3,7 +3,7 @@ layout: post
 title: How I created this blog/site, using Jekyll, Github pages, Bootstrap, Disqus and even more handy (and free!) tools.
 redirect_from: "/2015/08/13/how-I-created-this-blog/"
 permalink: how-I-created-this-blog
-tags: 
+tags:
   -  Meta
   -  Jekyll
   -  Github pages
@@ -12,15 +12,15 @@ tags:
   -  Technical
 ---
 
-When I finished my site and published [my first post][1], which detailed why I created this site and what I plan on doing with it, I promised at the end of it to explain in detail _how_ I created this blog, so you, the readers, can do something similar, if you like. The tools I used are free to download and use, so anyone can start using them today to make a site of their own. 
+When I finished my site and published [my first post][1], which detailed why I created this site and what I plan on doing with it, I promised at the end of it to explain in detail _how_ I created this blog, so you, the readers, can do something similar, if you like. The tools I used are free to download and use, so anyone can start using them today to make a site of their own.
 
 
-##My overall experience creating this site
+## My overall experience creating this site
 
 I had this site ready to use after two to three nights of hacking around with jekyll, which is _awesome_! If you have any programming experience and you are looking to create a personal blog, I totally recommend using jekyll, as there is a plethora of documentation, themes and all out there already. Its super easy to go from 0 to full custom blog. Being the techy type, I didn't want to use a bog standard theme, I wanted to hack around and create my own theme, but this shouldn't stop you from using a theme someone created :) I got stuck implementing some things just using the jekyll docs, but after a little bit of googling, I usually found a blog post which showed exactly how I could do what I wanted. I think taking an hour or two to simply familiarise yourself with the templating system would be more than enough to create a full featured blog site, using some samples from other peoples blogs, like I did. :)
 
 
-#### So what did I add to my site worth talking about? 
+#### So what did I add to my site worth talking about?
 
 Heres a quick list of what I did:
 
@@ -36,14 +36,16 @@ Heres a quick list of what I did:
 - [I have added google analytics to the site.](#google-analytics)
 
 <a class='anchor-link' id='github-pages-hosting'></a>
-###Using Github pages for hosting
+
+### Using Github pages for hosting
 
 Github have a really nifty feature that allows you to create a special branch for your repositories, named `gh-pages`, to make a website for that repo. This is perfect for writing documentation for that repo/project. Github, however, also allow you to create a special repository, named in the form `yourUsername.github.io`, which doesn't require you to create a special branch to make a website for the repo, it builds the site from master and then simply serves the files directly from the source. (If this went over your head, I recommend you `checkout` [git basics][2], its a great tool) If you create a repo named yourUsername.github.io and added a html file name index.html to it, you would then be able to access it at the url `yourUsername.github.io/index.html`. Github-pages can be read about in much more detail [here][3]
 
 Github also allows you to link a url you own to a github-pages hosted site, too. You must put a file named `CNAME` into the github-pages project, with your URL. You must correctly configure your DNS to point at your github pages when this file is added to the repo. This is normally configured where ever you purchased your url from. I used namecheap.io, and used their instructions [here][4], if you would like a simple guide which I know works.
 
 <a class='anchor-link' id='using-jekyll'></a>
-###Using Jekyll
+
+### Using Jekyll
 
 While github pages can be used to serve up static pages, creating these pages, and editing existing static pages to point to new pages would be a nightmare every time you made a post.
 
@@ -53,10 +55,11 @@ What this means: You make your sites templates, create pages to fit those templa
 
 First of all though, to start implementing some of the things in this post, you must create your jekyll project and the templates for that site. Explaining how to do this is outside the scope of this post, but you can read about getting started here, at the [jekyll documentation][8]
 
-Using Bootstrap just required me to link to those css and js files from my default layout. :) 
+Using Bootstrap just required me to link to those css and js files from my default layout. :)
 
 <a class='anchor-link' id='pagination'></a>
-###The index page, pagination of posts and excerpts
+
+### The index page, pagination of posts and excerpts
 
 If you look at my [index page][9] you can see that it is paginated. This means that it displays several of my most recent posts, and allows you to jump forward and backwards to more/less recent posts (when I have more posts to make it paginated). Adding this feature with jekyll is super easy, it just takes a little bit of configuration.
 
@@ -83,7 +86,7 @@ and then in your `index.html` file, you will need to write some liquid. Mine is 
 	  </p>
 	</div>
 {% endfor %}
-	
+
 {% if paginator.total_pages > 1 %}
 	<div class="pagination">
 	  {% if paginator.previous_page %}
@@ -91,7 +94,7 @@ and then in your `index.html` file, you will need to write some liquid. Mine is 
 	  {% else %}
 	    <span>&laquo; Prev</span>
 	  {% endif %}
-	
+
 	  {% for page in (1..paginator.total_pages) %}
 	    {% if page == paginator.page %}
 	      <em>{{ page }}</em>
@@ -101,7 +104,7 @@ and then in your `index.html` file, you will need to write some liquid. Mine is 
 	      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 	    {% endif %}
 	  {% endfor %}
-	
+
 	  {% if paginator.next_page %}
 	    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
 	  {% else %}
@@ -115,11 +118,12 @@ and then in your `index.html` file, you will need to write some liquid. Mine is 
 The excerpt above gives a nice output of the amount of posts you want on your index, with the first 100 words under the heading link, and under all of those, it gives a nice next and previous button, with page numbers to skip forward and back.
 
 <a class='anchor-link' id='static-pages'></a>
-###Static site pages, like the archive, tags, about and project sections
+
+### Static site pages, like the archive, tags, about and project sections
 
 Adding static pages to your site is _super_ easy!
 
-I first created a `page` layout template for these pages, and all these static pages extend this. 
+I first created a `page` layout template for these pages, and all these static pages extend this.
 
 An example archive page, is a file called archive.html in the main directory that extends the page template. An example would be like this:
 
@@ -138,7 +142,7 @@ title: My blog archive
 
 Its that simple to do!
 
-####The 404 page
+#### The 404 page
 
 The 404 page is a little bit more tricky, its just a page extending the default layout, with some extra options in the frontmatter, mine is done like so:
 
@@ -159,6 +163,7 @@ permalink: /404.html
 this means when you go to a page which doesn't exist, it will redirect to a nice error page.
 
 <a class='anchor-link' id='markdown-posts'></a>
+
 ### Using markdown for my site posts
 
 First, I needed to create a post layout for my posts, which all those markdown posts will then use. All the posts then just extend this template and are written in github flavored markdown. It seems to play pretty well with bootstrap as well, and doesn't look too bad! (code doesn't look great on mobile, however :()
@@ -166,6 +171,7 @@ First, I needed to create a post layout for my posts, which all those markdown p
 I would recommend only using markdown for posts, as all other pages would probably benefit from having the more fine-grained of raw html/liquid.
 
 <a class='anchor-link' id='disqus-comments'></a>
+
 ### Adding Disqus comments to posts
 
 Okay, great, so far I have showed you how to do the static things, such as creating pages, posts and pagination. To let users _interact_ with those posts, you need to overcome the static nature of your static site. Luckily, disqus does this perfectly! Enabling disqus comments on your blog just requires signing up to disqus, registering your site, and adding a piece of html to your posts template. However, I put this piece of html in a partial and include it in my main layout, so I could technically enable comments on _any_ of my pages... even my about section or archive section, if I so wished.
@@ -206,7 +212,8 @@ Then, in your default layout, add the partial where ever you want it to be, I ha
 So, to enable comments on any page or post, all you need to do is put `comments: true` in the frontmatter yaml. I have this set to true in my post.html layout, so all my posts extending this layout have comments enabled by default. I could disable comments on a per post basis by setting to false on that posts markdown, too, which is a nice side effect :)
 
 <a class='anchor-link' id='social-buttons'></a>
-###Adding social buttons to posts
+
+### Adding social buttons to posts
 
 Like the disqus site addition, social buttons required me to grab html excerpts from the sites I wanted to enable the buttons for, and then add them to my post layout page
 
@@ -220,9 +227,10 @@ I added the [twitter button][10], the [linkedin button][11], A [hacker news butt
 
 
 <a class='anchor-link' id='guest-authoring'></a>
-###Post authors, and adding guest authors
 
-I wanted to add the ability for my friends to author posts on my blog, which means they would need to be properly attributed to those authors, or people wouldn't do it at all! 
+### Post authors, and adding guest authors
+
+I wanted to add the ability for my friends to author posts on my blog, which means they would need to be properly attributed to those authors, or people wouldn't do it at all!
 
 To do this, I set the posts default `author` variable to be me in my `_config.yml` like so:
 
@@ -239,7 +247,8 @@ defaults:
 which then means posts will be attributed to me by default, but to attribute to another author, I can simply put their name in the front matter as the author variable to properly give credit! Now to find friends who would like to write a post or two... HA! :D
 
 <a class='anchor-link' id='post-tagging'></a>
-###Adding post tags
+
+### Adding post tags
 
 Jekyll makes adding post tags pretty easy, and I would highly recommend you add this to your site for your readers! :)
 
@@ -253,7 +262,7 @@ tags:
   - booooo!
 ```
 
-Accessing all tags on your site uses the {% raw %}`{% for tag in site.tags %}`{% endraw %} liquid tag, and accessing the tags on a per post basis uses the same liquid, but with a small change {% raw %}`{% for tag in post.tags %}`{% endraw %} 
+Accessing all tags on your site uses the {% raw %}`{% for tag in site.tags %}`{% endraw %} liquid tag, and accessing the tags on a per post basis uses the same liquid, but with a small change {% raw %}`{% for tag in post.tags %}`{% endraw %}
 
 My tags pages uses the first form, and my posts page uses the second form. Here is my tags page if you want to do something similar:
 {% raw %}
@@ -278,7 +287,7 @@ title: Tags
 		<strong>
 		  {{tag | first | downcase | replace:" ","-"}}
 	  </strong>
-	  {{ posts.size() }} post{% if posts.size() > 1 %}s{% endif %}. 
+	  {{ posts.size() }} post{% if posts.size() > 1 %}s{% endif %}.
 	</h3>
 	<ul>
 		{% for post in posts %}
@@ -296,20 +305,21 @@ title: Tags
 {% endraw %}
 
 <a class='anchor-link' id='google--analytics'></a>
-###Adding Google analytics to your site
+
+### Adding Google analytics to your site
 
 Google analytics is something you should definitely add to all your sites. Adding it just requires a piece of html taken from the analytics site. You must register your site with google, and then it gives you the piece of html to be added. Take this piece of html and add it to the bottom of your default layout. I put mine in a partial, and include it the main layout. Doing this is similar adding the disqus comments, first you need to create an `analytics.html` partial to be included, with your html taken from analytics, it might look like so:
 
 ```
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'YOUR CODE', 'auto');
-	  ga('send', 'pageview');
-	</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'YOUR CODE', 'auto');
+  ga('send', 'pageview');
+</script>
 ```
 
 and then to use it, simply put {% raw %}`{% include analytics.html %}`{% endraw %} at the bottom of your default layout :)
@@ -332,6 +342,3 @@ If you have any thoughts to share, questions you want answered or anything you t
 [11]: https://developer.linkedin.com/plugins/share
 [12]: http://www.hn-button.com/
 [13]: https://www.reddit.com/buttons/
-
-
-
