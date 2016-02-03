@@ -1,4 +1,9 @@
-markdown: rdiscount
+gems:
+  - jekyll-paginate
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 title: anotherDevsRamblings
 email: glenkeane.94@gmail.com
@@ -9,7 +14,6 @@ baseurl: ""
 url: "http://glenkeane.me"
 
 permalink: pretty
-relative_permalinks: true
 
 defaults:
   -
@@ -18,4 +22,3 @@ defaults:
       type: "posts"
     values:
       author: "Glen Keane"
-
