@@ -17,9 +17,9 @@ Hey! This is just a quick update to let anyone who is interested know that I hav
 
 My report is available [here](https://mega.nz/#!gBA3xbKT!13-F_gkN535cXwZ_F8Ipqg9nSFOW3eTQtZEYiZFRaI8).
 
-And my presentation is available [here](http://glenkeane.me/fyp-presentation), and embedded in an iframe below! :)
+And my presentation is available [here](/fyp-presentation), and embedded in an iframe below! :)
 
-<iframe class="block-element" src="http://glenkeane.me/fyp-presentation" height="400px" width="100%"></iframe>
+<iframe class="block-element" src="/fyp-presentation" height="400px" width="100%"></iframe>
 
 I also have a demo application which has the synchronisation functionality working, [available here](https://github.com/thekemkid/youtube-party).
 
