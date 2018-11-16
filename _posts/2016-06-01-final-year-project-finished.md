@@ -1,8 +1,8 @@
 ---
 layout: post
-title: My final year project material is available!
+title: My final year project is finished, and with that, college!
 redirect_from: "/2016/06/01/final-year-project-finished/"
-permalink: fyp-midway-update
+permalink: fyp-finished-update
 tags: 
   -  Personal
   -  "Final year project"
@@ -33,6 +33,6 @@ The application used to be live at mediasync.io, but I eventually tore it down. 
 
 I was nominated for an award for the best final year project from Sun Life, but unfortunately I didn't win it.
 
-That's all for that chapter of my life! :)
+And with that, I'm now finished college! That's all for that chapter of my life! :)
 
 I'll be starting with NearForm full time again soon. I'm excited to get back into the swing of things!
