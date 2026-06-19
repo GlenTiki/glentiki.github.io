@@ -1,93 +1,292 @@
+/* CSS custom properties */
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --border: #21262d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-	background-color: #F5F5F4;
-	font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
-	color: #3D3D3D;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+header nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+header nav a:hover {
+  color: var(--text);
+}
+
+/* Main */
+main.container {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0 0 0.25rem;
+}
+
+.location {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+
+.bio {
+  max-width: 600px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Social links */
+.socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Sections */
+section.experience,
+section.education {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Job entries */
+.job {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.job:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.job-company {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.job-dates {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.job-title {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Writing */
+section.writing {
+  margin-bottom: 3rem;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.post-title {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.post-title:hover {
+  color: var(--accent);
+}
+
+.post-source {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Post / blog styles used by archive and post layouts */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--text);
+}
+
+p {
+  color: var(--text-muted);
+}
+
+code {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--border);
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text-muted);
 }
 
 hr {
-  border-color: #7D7D7D;
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
 }
 
-.text-default {
-  color: #3D3D3D;
-}
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 
-.text-muted {
-  color: #777;
-}
+  .header-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-.inline-headers h5 {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-#wrap {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto -60px;
-  margin-top: 50px;
-  padding: 0 0 60px;
-}
-
-.footer {
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-.profile-pic,
-.twitter-timeline {
-  text-align: center;
-}
-
-.glyphicon-comment, 
-.glyphicon-tags,
-.glyphicon-time,
-.glyphicon-cog,
-.glyphicon-asterisk,
-.glyphicon-star-empty,
-.glyphicon-education,
-.glyphicon-heart-empty,
-.glyphicon-user {
-    font-size: 0.8em;
-}
-
-.glyphicon-chevron-right {
-    font-size: 0.6em;
-}
-
-.tag {
-  background-color: #B0E2FF;
-  padding: 4px;
-  padding-left: 10px;
-  padding-right: 6px;
-  border-radius: 25px 8px 8px 25px;
-  margin-bottom:3px;
-  display: inline-block;
-}
-
-.tag:before {
-  content: '\b7\a0\a0\a0';
-  font-weight: bold;
-}
-
-section, 
-#disqus_thread{
-  padding-top: 150px;
-  margin-top: -150px;
-}
-
-.anchor-link {
-  display: block; 
-  position: relative; 
-  top: -100px; 
-  visibility: hidden;
-}
-
-.block-element {
-  display:block;
+  header nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 }

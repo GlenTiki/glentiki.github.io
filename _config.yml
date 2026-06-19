@@ -7,13 +7,13 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-title: anotherDevsRamblings
+title: Glen Keane
 email: glenkeane.94@gmail.com
-description: "This is Glen Keane's personal website for all his rants, raves and ramlings."
+description: "Senior Forward Deployed AI Engineer. Building AI-integrated solutions at Brightbeam."
 
 paginate: 10
 baseurl: ""
-url: "http://glenkeane.me"
+url: "https://glentiki.dev"
 
 permalink: pretty
 

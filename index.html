@@ -1,73 +1,82 @@
 ---
 layout: default
-commentCount: true
+title: Glen Keane
 ---
 
-<h1>var {{ site.title }} = this;</h1>
-
-<p class="text-justify">
-	Welcome to my little corner in the big world. Feel free to poke around. This is the home to my ramblings on technology, gaming, current events and so on and so forth. Eventually I might consider myself one of them hipster bloggers... :D
-</p>
-<hr>
-
-<div class="posts">
-  {% for post in paginator.posts %}
-    <h2>
-      <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-    <h3 class='muted'> 
-      <small>
-        <span class='glyphicon glyphicon-time'></span> Posted: {{ post.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ post.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-muted' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
-      </small>
-    </h3>
-
-    <p class='muted'>{{ post.content | strip_html | truncatewords: 100 }}</p>
-    <h6 class='muted'><span class='glyphicon glyphicon-tags'></span> Tags: 
-      <span class="tags">
-        {% for tag in post.tags %}
-          {% assign t = tag | downcase | replace:" ","-" %}
-          <span class='tag'><a href='/tags/#{{t}}'>{{t}}</a></span>
-        {% endfor %}
-      </span>
-    </h6>
-    <h3>
-      <small>
-        <a class="text-default" href="{{ site.baseurl }}{{ post.url }}">
-          Read more <span class='glyphicon glyphicon-chevron-right'></span>
-        </a> 
-        |
-        <span class='glyphicon glyphicon-comment'></span> <a class='text-default' href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
-        <span class='glyphicon glyphicon-chevron-right'></span>
-      </small>
-    </h3>
-    <hr>
-  {% endfor %}
+<div class="hero">
+  <h1>Glen Keane</h1>
+  <p class="tagline">Senior Forward Deployed AI Engineer</p>
+  <p class="location">Waterford, Ireland</p>
+  <p class="bio">I build AI-integrated solutions for enterprise customers at Brightbeam — knowledge agents, RAG systems, hybrid search, and agentic workflows. Before that I was Head of Engineering at SalesTier, and the first engineering hire at Wayflyer, which went on to become a unicorn fintech. I contributed to the Node.js core and helped write the OpenJS Node.js certification. I'm interested in open source, AI systems, and occasionally write about both.</p>
+  <div class="socials">
+    <a class="social-link" href="https://bsky.app/profile/glentiki.dev">Bluesky</a>
+    <a class="social-link" href="https://github.com/GlenTiki">GitHub</a>
+    <a class="social-link" href="https://ie.linkedin.com/in/glentiki">LinkedIn</a>
+    <a class="social-link" href="https://medium.com/@glentiki">Medium</a>
+  </div>
 </div>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+<section class="experience">
+  <h2>Experience</h2>
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Brightbeam</span>
+      <span class="job-dates">Jan 2025 – Present</span>
+    </div>
+    <div class="job-title">Senior Software Engineer</div>
+    <p class="job-desc">Responsible for the architecture and delivery of AI-integrated solutions for enterprise customers. Delivered knowledge agent systems that saw strong adoption, and work across the AI stack: LLM tooling, RAG, hybrid search, and agentic development. Finalist in the Sun Life Awards for Innovation.</p>
+  </div>
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">SalesTier</span>
+      <span class="job-dates">May 2022 – Jan 2025</span>
+    </div>
+    <div class="job-title">Head of Engineering</div>
+    <p class="job-desc">Founding team member of a beverage industry software startup. Led engineering across the product while managing enterprise customer relationships. Built an ML-powered image recognition pipeline for a Fortune 500 client's Irish sales operations.</p>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Wayflyer</span>
+      <span class="job-dates">Apr 2020 – May 2022</span>
+    </div>
+    <div class="job-title">Senior Product Engineer</div>
+    <p class="job-desc">First engineering hire at a pre-seed fintech that grew into a unicorn. Helped set the engineering culture and built across the full stack: Python/Django backend, TypeScript/React frontend, AWS CDK infrastructure.</p>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">NearForm</span>
+      <span class="job-dates">Jun 2014 – Jan 2020</span>
+    </div>
+    <div class="job-title">Senior Software Engineer</div>
+    <p class="job-desc">Joined as an intern and progressed to Senior Engineer and Tech Lead across multiple client engagements. Became a Node.js core maintainer/collaborator, contributed LTTng tracing support to the Node.js source, and helped develop the OpenJS Foundation's Node.js certification programme.</p>
+  </div>
+</section>
+
+<section class="writing" id="writing">
+  <h2>Writing</h2>
+  <div class="post-list">
+    <div class="post-item">
+      <a href="https://medium.com/@glentiki/writing-an-impressively-fast-http-load-testing-tool-in-golang-for-fun-and-learning-9043b164bd99" class="post-title">Writing an Impressively Fast HTTP Load Testing Tool in Golang</a>
+      <span class="post-source">Medium</span>
+    </div>
+    <div class="post-item">
+      <a href="https://medium.com/@glentiki/creating-automated-multi-platform-golang-executable-binary-releases-with-xgo-and-github-actions-8877f7b72740" class="post-title">Automated Multi-platform Golang Binary Releases with xgo and GitHub Actions</a>
+      <span class="post-source">Medium</span>
+    </div>
+  </div>
+</section>
+
+<section class="education">
+  <h2>Education</h2>
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Waterford Institute of Technology</span>
+      <span class="job-dates">2012 – 2016</span>
+    </div>
+    <div class="job-title">BSc(Hons) Applied Computing</div>
+  </div>
+</section>
