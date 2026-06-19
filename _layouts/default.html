@@ -11,5 +11,23 @@
   {% include header.html %}
   <main class="container">{{ content }}</main>
   {% include footer.html %}
+  <script>
+    (function () {
+      var el = document.getElementById('mako-status');
+      if (!el) return;
+      var controller = new AbortController();
+      var timer = setTimeout(function () { controller.abort(); }, 3000);
+      fetch('https://healthchecker.glentiki.dev/personal/status', { signal: controller.signal })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          clearTimeout(timer);
+          if (d.status === 'online') {
+            el.className = 'mako-status mako-online';
+            el.title = 'Mako online';
+          }
+        })
+        .catch(function () { /* offline or unreachable — stay hidden */ });
+    })();
+  </script>
 </body>
 </html>

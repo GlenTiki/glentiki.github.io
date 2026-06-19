@@ -248,6 +248,25 @@ section.writing {
 }
 
 /* Footer */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mako-status {
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.mako-online {
+  display: inline-block;
+  background: #3fb950;
+  box-shadow: 0 0 6px #3fb950;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1.5rem 0;
