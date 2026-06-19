@@ -204,6 +204,43 @@ section.writing {
   color: var(--accent);
 }
 
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.post-tags a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.post-nav-older {
+  margin-left: auto;
+}
+
+.older-posts {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+}
+
+.older-posts a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.older-posts a:hover {
+  color: var(--accent);
+}
+
 .post-source {
   color: var(--text-muted);
   font-size: 0.8rem;

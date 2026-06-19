@@ -1,70 +1,35 @@
 ---
 layout: default
-comments: true
-commentCount: true
 ---
 
-<h1>{{ page.title }}</h1>
-
-<h3>
-  <small>
-	  <span class='glyphicon glyphicon-time'></span> Posted: {{ page.date | date: "%B %e, %Y" }} | <span class='glyphicon glyphicon-user'></span> Author: {{ page.author }} | <span class='glyphicon glyphicon-comment'></span> <a class='text-muted' href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{page.url}}"></a>
-  </small>
-</h3>
-
-<hr>
-
-<p class="text-justify">
-	{{ content }}
-</p>
-<hr>
-{% if page.tags %}
-<h5 class='muted'><span class='glyphicon glyphicon-tags'></span> Filed under:</h5>
-<div class="tags">
-  {% for tag in page.tags %}
-    {% assign t = tag | downcase | replace:" ","-" %}
-    <div class='tag'><a href='/tags/#{{t}}'>{{t}}</a></div>
-  {% endfor %}
-</div>
-{% endif %}
-
-{% for post in site.posts %}
-  {% if post.url == page.url %}
-    {% assign post_index0 = forloop.index0 %}
-    {% assign post_index1 = forloop.index %}
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta">{{ page.date | date: "%B %e, %Y" }} · {{ page.author }}</p>
+  <hr>
+  {{ content }}
+  <hr>
+  {% if page.tags %}
+  <p class="post-tags">
+    {% for tag in page.tags %}
+      {% assign t = tag | downcase | replace:" ","-" %}
+      <a href="/tags/#{{t}}">{{ t }}</a>
+    {% endfor %}
+  </p>
   {% endif %}
-{% endfor %}
-{% for post in site.posts %}
-  {% if post_index0 == forloop.index %}
-    {% assign next_post = post.url %}
-  {% endif %}
-  {% if post_index1 == forloop.index0 %}
-    {% assign prev_post = post.url %}
-  {% endif %}
-{% endfor %}
-<br>
-
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="glentiki">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-<script type="IN/Share" data-counter="right"></script>
-
-<a href="https://news.ycombinator.com/submit" class="hn-button" data-count="horizontal">Vote on Hacker News</a>
-<script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
-
-<script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
-
-<span class='pull-right'>
-  {% if prev_post %}
-    <a href="{{ prev_post }}">&laquo; Older Post</a>
-  {% else %}
-    &laquo; Older Post
-  {% endif %}
-  |
-  {% if next_post %}
-    <a href="{{ next_post }}">Newer Post &raquo;</a>
-  {% else %}
-    Newer Post &raquo;
-  {% endif %}
-</span>
-<br>
+  <nav class="post-nav">
+    {% for post in site.posts %}
+      {% if post.url == page.url %}
+        {% assign post_index0 = forloop.index0 %}
+        {% assign post_index1 = forloop.index %}
+      {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+      {% if post_index1 == forloop.index0 %}
+        <a href="{{ post.url }}">← Newer</a>
+      {% endif %}
+      {% if post_index0 == forloop.index %}
+        <a href="{{ post.url }}" class="post-nav-older">Older →</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</article>
